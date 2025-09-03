@@ -32,6 +32,39 @@ This document provides an overview of the project, setup instructions, and detai
   - Store results in *Amazon DynamoDB*.
 
 ---
+## Folder Structure
+
+### Backend
+- *backend/*
+  - *resume_analyzer/*
+    - | [resume_analyzer_lambda_website_integrated.py](./resume_analyzer_lambda_website_integrated.py) | – Main Python file for resume analysis logic  
+    - test/
+      - test_resume_lambda.py – Unit tests for resume analyzer Lambda  
+  - *interview_grader/*
+    - | [video_resume_lambda_1_website_integrated.py](./video_resume_lambda_1_website_integrated.py) | – Main Python file for interview video grading logic  
+    - test/
+      - test_video_lambda_1.py – Unit tests for video grading Lambda
+    - | [video_resume_lambda_2_website_integrated.py](./video_resume_lambda_2_website_integrated.py) | – Main Python file for interview video grading logic  
+      - test/
+        - test_video_lambda_2.py – Unit tests for video grading Lambda
+  - | [app.py](./app.py) | – Entry point for local testing / API integration  
+
+### Frontend
+- *frontend/*
+  - | [index.html](./index.html) | – Landing page  
+  - | [ind.html](./ind.html) | – Login, Signup page 
+  - | [dashboard.html](./dashboard.html) | – User dashboard  
+  - | [resume-analyzer.html](./resume-analyzer.html) | – Resume analysis interface  
+  - | [interview-grader.html](./interview-grader.html) | – Video grading interface
+
+### Documentation
+- *docs/*  
+  - | [flow_chart.jpg](./flow_chart.jpg) | – Flowchart of the system  
+  - | [HireFusionAI_documentation.pdf](./HireFusionAI_documentation.pdf) | – Detailed project documentation  
+
+- | [README.md](./README.md) | – Project description and usage guide
+
+---
 
 ## AWS Architecture and Services Used
 
